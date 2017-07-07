@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 11/21/17}\\
+	\textbf{Selection Statements/Methods}
+\end{center}
+
+\noindent\textbf{Practice Problem \#1}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method.
+	\item In the main method prompt the user for\texttt{ n1} and \texttt{n2}.
+	\item Write a second method named \texttt{max} that takes two integer parameters, \texttt{a} and \texttt{b}.
+	\item The method should return whichever integer is larger wihtout using the Math class. The method should also display which integer was larger or that they are equal.
+	\item Several sample method calls are provided for you below. You should test your method inside the \texttt{main} method.
+\end{itemize}
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & Output \\
+\hline\rule{0pt}{4ex}
+\texttt{max(5, 5)} & \texttt{They are equal}\\
+\hline\rule{0pt}{4ex}
+\texttt{max(-4, 3)} & \texttt{n2 is the max at: 3}\\
+\hline\rule{0pt}{4ex}
+\texttt{max(6, 11)} & \texttt{n2 is the max at: 11}\\
+\hline\rule{0pt}{5ex}
+\texttt{max(8, 2)} & \texttt{n1 is the max at: 8}\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\textbf{Practice Problem \#2}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method. This method should take user input. You may assume the integer that is input is less than 100.
+	\item Write a second method named \texttt{sumOfDigits} that takes one integer parameter, \texttt{a}.
+	\item The method should return the sum of the digits entered by the user.
+	\item Several sample method calls are provided for you below. You should test your method inside the \texttt{main} method.
+\end{itemize}
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & Output \\
+\hline\rule{0pt}{4ex}
+\texttt{sumOfDigits(10)} & \texttt{Sum is: 1}\\
+\hline\rule{0pt}{4ex}
+\texttt{sumOfDigits(99)} & \texttt{Sum is: 18}\\
+\hline\rule{0pt}{4ex}
+\texttt{sumOfDigits(25)} & \texttt{Sum is: 7}\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

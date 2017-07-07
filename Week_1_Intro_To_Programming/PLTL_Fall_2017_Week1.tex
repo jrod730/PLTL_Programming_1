@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{pxfonts}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 11/07/17}\\
+	\textbf{Intro to Programming}
+\end{center}
+
+\noindent\textbf{Practice Tracing}\\ \\
+Given the following variable declarations, what is the value of each of the following independent expressions?\\
+\hspace*{0.5cm}\textbf{\texttt{int}} \texttt{a = 2, b = 1, c = 4;}\\
+\hspace*{0.5cm}\textbf{\texttt{double}}\texttt{ x = 5.0, y = 2.0;}\\
+\hspace*{0.5cm}\texttt{String s = "Java";}
+\begin{itemize}
+	\item \texttt{a + b + c}
+	\item \texttt{a + x + c}
+	\item \texttt{y + x + c}
+	\item \texttt{a * b + c}
+	\item \texttt{y * b + c}
+	\item \texttt{x + s + c}
+	\item \texttt{s + (c * x)}
+	\item \texttt{a * b + s}
+	\item \texttt{c / y + c}
+	\item \texttt{c + c / a}
+	\item \texttt{x $\%$ a}
+	\item \texttt{c $\%$ a}
+\end{itemize}
+
+
+\vspace*{0.5cm}
+\textbf{Practice coding}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{HowManyMiles} and has the \texttt{main} method.
+	\item The program should determine the amount of inches in any mile. The user should be prompted to enter distance in miles. Remember that there are 5280 feet in a mile.
+	\item You may assume the user will enter a mileage of less than 100mi.
+	\item Then use your answer to determine how many inches are in that mileage.
+	\item Once the inches are determined multiply them by 2 and add 5.
+	\item Now determine how many feet and inches go evenly into your total amount of new inches. Take notice of the sample output for guidance.
+	\item Lastly, figure out the \textbf{exact} mileage of the new distance. See the last line of sample output for help.
+	\item Several sample runs are provided for you below. Format your output to match the sample output. Note that your code should work for any value and these are just samples (you cannot hard-code your values in your code).
+\end{itemize}
+\begin{center}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=!]
+Enter a distance in miles: !\textbf{3}!
+The distance in inches is: 190080
+Your !\texttt{new}! distance is 31680 ft. and 5 in.
+The total miles is now 6.00094696969697
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=!]
+Enter a distance in miles: !\textbf{4}!
+The distance in inches is: 253440
+Your !\texttt{new}! distance is 42240 ft. and 5 in.
+The total miles is now 8.000946969696969
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=!]
+Enter a distance in miles: !\textbf{4}!
+The distance in inches is: 63360
+Your !\texttt{new}! distance is 10560 ft. and 5 in.
+The total miles is now 2.0009469696969697
+\end{lstlisting}
+\end{minipage}
+\end{center}
+	
+\end{document}

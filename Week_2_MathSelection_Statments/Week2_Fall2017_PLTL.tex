@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{pxfonts}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 11/14/17}\\
+	\textbf{Selection Statements/Math}
+\end{center}
+
+\noindent\textbf{Practice Problem \#1}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{CheckIfSame} and that has the \texttt{main} method.
+	\item The program should ask the user to enter two integers.
+	\item The program should determine whether the two integers have have the same quotient when divided by 10 and check if the same two integers are divisible by ten.
+	\item If they have the same quotient print out \texttt{The quotients are the same!}.
+	\item If they are both divisible by 10, print out \texttt{They are both divisible by ten!}.
+	\item The pogram should then check if the two integers are either divisble by 10 or have the same quotient when divided by 10. If they do, print out \texttt{Either quotient or remainder are the same!}. 
+	\item If the two integers are both divisible by 10 and have the same quotient, then check if both quotients are divisible by 2. If they are print \texttt{The quotient is divisible by two!}. If they are not, print \texttt{The quotient is not divisible by 2.}.
+	\item If they don't have the same quotient and are not divisible by 10 then print \texttt{Nothing is the same!}.
+	\item Several sample runs are provided for you below. Format your output to match the sample output.
+\end{itemize}
+\begin{center}
+\begin{minipage}{6cm}
+\begin{lstlisting}[escapechar=@]
+First number: @\textbf{10}@
+Second number: @\textbf{10}@
+The quotients are the same!
+They are both divisible by ten!
+The quotient is not divisible by 2.
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=@]
+First number: @\textbf{3}@
+Second number: @\textbf{5}@
+The quotients are the same!
+Either quotient or remainder are the same!
+\end{lstlisting}
+\end{minipage}
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\textbf{Practice Problem \#2}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{MaxMinMax} and that has the \texttt{main} method.
+	\item The program should take the absolute value of the integers.
+	\item The program should check which absolute value is larger and then display that value accordingly (see output). If they are equal the program should print that they are equal.
+	\item Use the following equation to print a new maximum value (see output): $Max^{Min}$, $Min^{Max}$
+	\item Several sample runs are provided for you below. Format your output to match the sample output.
+\end{itemize}
+\begin{center}
+\begin{minipage}{4cm}
+\begin{lstlisting}[escapechar=!]
+Enter n1: !\textbf{2.0}!
+Enter n2: !\textbf{2.0}!
+Their values are equal.
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=!]
+Enter n1: !\textbf{2.0}!
+Enter n2: !\textbf{4.0}!
+Absolute value of 4.0 is greater than 2.0
+The new max is: 16.0
+\end{lstlisting}
+\end{minipage} \\
+\vspace*{0.1cm}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=!]
+Enter n1: !\textbf{10.0}!
+Enter n2: !\textbf{5.0}!
+Absolute value of 10.0 is greater than 5.0
+The new Max is: 9765625.0
+\end{lstlisting}
+\end{minipage} 
+\end{center}	
+
+\end{document}

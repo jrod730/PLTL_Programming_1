@@ -1,0 +1,1 @@
+a + b + c = 7 a + x + c = 11.0 y + x + c = 11.0 a * b + c = 6 y * b + c = 6.0 x + s + c = 5.0Java4 s  + (c * x) = Java20.0 a * b + s = 2Java c / y  + c = 6.0 c + c / a = 6 x % a = 1.0 c % a = 0 
