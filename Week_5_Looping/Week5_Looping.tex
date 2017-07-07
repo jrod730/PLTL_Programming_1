@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 10/03/17}\\
+	\textbf{Looping}
+\end{center}
+
+
+\noindent\textbf{Practice Problem \#1}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method. The \texttt{main} method should take user input for one integer.
+	\item The create another method called \texttt{isPrime} that is void and takes one integer as a parameter. .
+	\item Write a third method named \texttt{check} that returns a boolean and takes an integer as a parameter.
+	\item The program should print out \texttt{true} if the number entered by the user is prime and \texttt{false} if otherwise.
+	\item Several sample runs are provided for you below. Your output must be formatted \textbf{exactly} like the sample runs below. Note that while your output must be formatted as below, you will not get the same results as this uses random numbers.
+\end{itemize}
+\begin{center}
+\begin{minipage}{8cm}
+\begin{lstlisting}[escapechar=@]
+Enter n: @\textbf{5}@
+true
+\end{lstlisting}
+\end{minipage}\\
+\vspace*{0.5cm}
+\begin{minipage}{8cm}
+\begin{lstlisting}[escapechar=@]
+Enter n: @\textbf{9}@
+false
+\end{lstlisting}
+\end{minipage}
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\textbf{Practice Problem \#2}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method.
+	\item IAsk the user to enter integers until 3 consecutive inreasing integers are enter.
+	\item The program should display the sum of all the integers entered.
+	\item Several sample runs are provided for you below. Your output must be formatted \textbf{exactly} like the sample runs below.
+\end{itemize}
+\begin{center}
+\begin{minipage}{3cm}
+\begin{lstlisting}[escapechar=@]
+Enter an int: @\textbf{3}@
+Enter an int: @\textbf{4}@
+Enter an int: @\textbf{5}@
+12
+\end{lstlisting}
+\end{minipage}
+\hspace*{.5cm}
+\begin{minipage}{3cm}
+\begin{lstlisting}[escapechar=@]
+Enter an int: @\textbf{20}@
+Enter an int: @\textbf{-2}@
+Enter an int: @\textbf{-1}@
+Enter an int: @\textbf{0}@
+17
+\end{lstlisting}
+
+\end{minipage}
+\hspace*{.5cm}
+\begin{minipage}{3cm}
+\begin{lstlisting}[escapechar=@]
+Enter an int: @\textbf{1}@
+Enter an int: @\textbf{7}@
+Enter an int: @\textbf{8}@
+Enter an int: @\textbf{2}@
+Enter an int: @\textbf{9}@
+Enter an int: @\textbf{10}@
+Enter an int: @\textbf{11}@
+48
+\end{lstlisting}
+
+\end{minipage}\\
+
+
+\end{center}
+
+\vspace*{0.5cm}
+
+
+\end{document}
