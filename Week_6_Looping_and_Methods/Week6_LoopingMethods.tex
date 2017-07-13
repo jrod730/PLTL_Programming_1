@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 10/03/17}\\
+	\textbf{Looping/Methods}
+\end{center}
+
+
+\noindent\textbf{Problem \#1}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method.
+	\item Prompt the user to enter \texttt{int n} less than 20
+	\item Create new method named \texttt{powerBaseTwo} which takes \texttt{int} as a parameter and returns an \texttt{int}. The program should also print the result. You may not use \texttt{Math.pow} method and you can only use decrementation operators.
+	\item Create a third method named \texttt{isDivByFive} which takes \texttt{int} as parameter and returns void. This method should check if the answer printed in \texttt{powerBaseTwo} method is divisible by 4. If it is, then print the quotient. If is it not, then print \texttt{-1}.
+	\item Several sample runs are provided for you below. Your output must be formatted \textbf{exactly} like the sample runs below. 
+\end{itemize}
+\begin{center}
+\begin{minipage}{4cm}
+\begin{lstlisting}[escapechar=@]
+Enter int (<20): @\textbf{9}@
+512
+128
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{4cm}
+\begin{lstlisting}[escapechar=@]
+Enter int (<20): @\textbf{8}@
+256
+64
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{4cm}
+\begin{lstlisting}[escapechar=@]
+Enter int (<20): @\textbf{0}@
+1
+-1
+\end{lstlisting}
+\end{minipage}\\
+
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\textbf{Problem \#2}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method. 
+	\item Prompt the user to enter 5 integers.
+	\item Create a second method named \texttt{sumEveryDigit} which takes an \texttt{int} as a parameter and returns an \texttt{int}. This method should sum every digit in all of the integers enter by the user then return the sum.
+	\item The total sum from every digit entered should be printed.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code.
+\end{itemize}
+\begin{center}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=@]
+Enter 5 Integers: @\textbf{ 1 2 3 4 5}@
+15
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{7cm}
+\begin{lstlisting}[escapechar=@]
+Enter 5 Integers: @\textbf{ 0 0 0 0 1234}@
+10
+\end{lstlisting}
+\end{minipage}
+\end{center}
+
+\end{document}
