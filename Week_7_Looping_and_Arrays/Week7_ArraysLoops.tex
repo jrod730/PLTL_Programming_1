@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Spring 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 10/17/17}\\
+	\textbf{Arrays/Loops}
+\end{center}
+
+
+\noindent\textbf{Problem \#1}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method.
+	\item Prompt the user to enter a positive integer \texttt{n} between 0 - 9999 until there is a repeat entry.
+	\item The program should firgure out how many integers were entered before there was a repeat entry.
+	\item You may only use a \texttt{boolean} array to solve this problem.
+	\item Several sample runs are provided for you below. Your output must be formatted \textbf{exactly} like the sample runs below. 
+\end{itemize}
+\begin{center}
+\begin{minipage}{5.6cm}
+\begin{lstlisting}[escapechar=$]
+Enter an int: 1
+Enter an int: 1
+You have entered 1 value
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\begin{minipage}{5.6cm}
+\begin{lstlisting}[escapechar=$]
+Enter an int: 87
+Enter an int: 90
+Enter an int: 87
+You have entered 2 values
+\end{lstlisting}
+\end{minipage}\\
+\begin{minipage}{5.6cm}
+\begin{lstlisting}[escapechar=$]
+Enter an int: 67
+Enter an int: 80
+Enter an int: 95
+Enter an int: 30
+Enter an int: 67
+You have entered 4 values
+\end{lstlisting}
+\end{minipage}
+\hspace*{0.5cm}
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\textbf{Problem \#2}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method. Within \texttt{main} create 3 chars with the values a, b, x.
+	\item Create a string array with that contains: cat, dog, mouse, x, monkey, tiger, a.
+	\item Create a boolean array length 3.
+	\item Create a new method named \texttt{checkChar} that takes a char and string array as a parameter then returns a boolean value. This value should be saved in your boolean array.
+	\item Inside of this method compare the char to the elements in the array. In order to do this you must first concatenate the char with an empty string. This will turn the char into a string. 
+	\item A sample usage is provided for you below. Consider why each output from the boolean array is false. 
+\end{itemize}
+\begin{center}
+\vspace{.10cm}
+\begin{minipage}{5.6cm}
+\begin{lstlisting}[escapechar=$]
+false
+false
+false
+\end{lstlisting}
+\end{minipage}
+\end{center}
+
+\end{document}

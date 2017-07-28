@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+\usepackage{booktabs}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Spring 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 04/17/17}\\
+	\textbf{Review}
+\end{center}
+
+
+\noindent\underline{\textbf{Problem \#1}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method. Leave the \texttt{main} method empty for now.
+	\item Write a method named \texttt{diagSquare} that takes a 2D integer array \texttt{a}, and returns a boolean.
+	\item The method should check if both diagonal sums of the square array are the same. If they are, return true.
+	\item The program should then print out the boolean value that is returned.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code.
+\end{itemize}
+
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{|p{26.66em}|c|}
+    \toprule
+    \multicolumn{1}{|c|}{Sample Method Usage} & Return Value \\
+    \midrule
+    \texttt{\textbf{int}[][] a1 = \{\{1, 2, 3,  4\},\newline \hspace*{2.85cm} \{5, 6, 7, 8\},\newline \hspace*{2.85cm} \{2, 1, 5, 9\}, \newline \hspace*{2.85cm} \{10, 2, 3, 10\}\}; }& \texttt{\textbf{true}} \\
+    \midrule
+    \texttt{\textbf{int}[][] a1 = \{\{3, 4, 7,  10\},\newline \hspace*{2.85cm} \{19, 50, 4, 6\},\newline \hspace*{2.85cm} \{2, 5, 11, 74\},\newline \hspace*{2.85cm} \{1, 2, 3, 4\}\}; } & \texttt{\textbf{false}} \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+\vspace*{0.5cm}
+\noindent\underline{\textbf{Problem \#2}}
+\begin{itemize}
+	\item Write a method named \texttt{change2D} that takes a 1D aray of integers and returns a 2D array.
+	
+	\item The method should create a new 2D array that always has two rows. The method should place the elements from the 1D array that are not divisble by 2 into equally divided number of columns in the 2D array. You may assume that the number of elements taken from the 1D array will always be even.
+	\item Create a print array method to display the output of the new 2D array.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code. 
+\end{itemize}
+
+\begin{table}[htbp]
+
+  \centering
+    \begin{tabular}{|p{28.66em}|p{11em}|}
+    \toprule
+    \multicolumn{1}{|c|}{Sample Method Usage} & \multicolumn{1}{c|}{Return Value} \\
+    \midrule
+   \texttt{ \textbf{int}[] a1 = \{2, 5, 37, 103, 94, 71, 67, 99, 43, 21\}; }& \texttt{\{\{5, 37, 103, 71\},\newline \hspace*{.005em} \{67, 99, 43, 21\}\}} \\
+    \midrule
+   \hspace*{6pt}\texttt{\textbf{int}[] b1 = \{3, 2, 6, 7\}; } & \{\{3\},\newline \hspace*{3pt}\{7\}\} \\
+    \bottomrule
+    \end{tabular}%
+\end{table}%
+\end{document}

@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Spring 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 03/05/17}\\
+	\textbf{Arrays/Methods}
+\end{center}
+
+
+\noindent\underline{\textbf{Problem \#1}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method. Leave the \texttt{main} method empty for now.
+	\item Write a method named \texttt{centeredAverage} that takes one parameter, an integer array \texttt{a} and returns an integer.
+	\item The method should find the average of the elements in the array by omitting the largest and smallest integers . If there are multiple smallest and largest numbers you may ignore only one of each respectively.
+	\item Return the average using integer division.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code.
+\end{itemize}
+\begin{center}
+\small
+\begin{tabular}{| c | c |}
+\hline\rule{0pt}{4ex}
+Sample Method Usage & Return Value \\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int}[] a1 = \{ 1, 2, 3, 4, 100 \};} \\ \texttt{\textbf{int} n1 = centeredAverage(a1);}} & \texttt{3}\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int}[] a2 = \{ 1, 1, 5, 5, 10, 8, 7 \};} \\ \texttt{\textbf{int} n2 = centeredAverage(a2);}} & \texttt{5}\\
+\hline\rule{0pt}{5ex}
+\makecell[l]{\texttt{\textbf{int}[] a3 = \{ -10, -4, -2, -4, -2, 0 \};} \\ \texttt{\textbf{int} n3 = centeredAverage(a3);}} & \texttt{-3}\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\underline{\textbf{Problem \#2}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method. Prompt the user to enter an integer \texttt{n}.
+	\item Write a method named \texttt{nMinusString} that takes one parameter, an integer \texttt{n} and returns a String array.
+	\item The method should create a new String array size \texttt {n}. The method should also populate the array from 0 to n -1.
+	\item Create a \texttt{printArray} method that takes a String array and prints out the each elemnt of the array.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code (and use the \texttt{printArray} method to print out the results of calling the \texttt{tenInARow} method!).
+\end{itemize}
+\begin{center}
+\begin{minipage}{3cm}
+\begin{lstlisting}[escapechar=@]
+Enter an int: @\textbf{7}@
+0 1 2 3 4 5 6
+\end{lstlisting}
+\end{minipage}
+\hspace*{.5cm}
+\begin{minipage}{3cm}
+\begin{lstlisting}[escapechar=@]
+Enter an int: @\textbf{9}@
+0 1 2 3 4 5 6 7 8
+\end{lstlisting}
+\end{minipage}
+\hspace*{.5cm}
+\begin{minipage}{3cm}
+\begin{lstlisting}[escapechar=@]
+Enter an int: @\textbf{5}@
+0 1 2 3 4 
+\end{lstlisting}
+
+\end{minipage}\\
+
+
+\end{center}
+
+\end{document}

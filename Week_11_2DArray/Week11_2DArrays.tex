@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Spring 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 04/03/17}\\
+	\textbf{2D Arrays}
+\end{center}
+
+
+\noindent\underline{\textbf{Problem \#1}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method. Leave the \texttt{main} method empty for now.
+	\item Write a method named \texttt{binaryArr} that takes one parameter, an 2-dimensional (2D) boolean array named \texttt{a} and returns a 2D integer array.
+	\item The method should create a new integer array that replaces every \texttt{false} from the booelan array with a \texttt{0} and every \texttt{true} with a \texttt{1}.
+	\item Create a \texttt{print2DArray} method that takes a 2D integer array as a parameter and prints out the elements of each row on its own line separated by spaces.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code (and use the \texttt{printArray} method to print out the results of calling the \texttt{transpose} method!).
+\end{itemize}
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{|p{28.055em}|p{5.13em}|}
+    \toprule
+    \multicolumn{1}{|c|}{Sample Method Usage} & \multicolumn{1}{l|}{Output} \\
+    \midrule
+    \texttt{\textbf{boolean}[][] b1 = \{\{\textbf{false, true, false, true, true}\}, \newline \hspace*{3.75cm} \{\textbf{true, false, false, true, true}\},\newline \hspace*{3.75cm} \{\textbf{false, false, true, true, false}\}\};}  & \texttt{01011\newline{}10011\newline{}00110} \\
+    \midrule
+    \texttt{\textbf{boolean}[][] b1 =\{\{\textbf{true, false, true, false}\}, \newline \hspace*{3.55cm} \{\textbf{false, false, true, false}\}\};} & \texttt{1010\newline{}0010} \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+\vspace*{0.5cm}
+\noindent\underline{\textbf{Problem \#2}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method. Leave the \texttt{main} method empty for now.
+	\item Write a method named \texttt{inSequence} that takes a 2D integer array, and returns a boolean value. 
+	\item The method should check if it the numbers are in sequence from  1 to n * n . If they are, then return true. You may assume that the array is already a perfect square.
+	\item Several sample usages are provided for you below. Use the sample usages in the \texttt{main} method to test your code.
+\end{itemize}
+
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{|p{20.66em}|c|}
+    \toprule
+    \multicolumn{1}{|c|}{Sample Method Usage} & Return Value \\
+    \midrule
+    \texttt{\textbf{int} [][] a1 = \{\{1, 2, 3,  4\},\newline \hspace*{3.30cm}\{5, 6, 7, 8\},\newline \hspace*{3.30cm}\{9, 10, 11, 12\}, \newline \hspace*{3.30cm}\{13, 14, 15, 16\}\}; }& \texttt{\textbf{true}} \\
+    \midrule
+    \texttt{\textbf{int} [][] a1 = \{\{1, 3, 2,  4\},\newline \hspace*{3.1cm} \{3, 5, 8, 7\},\newline \hspace*{3.1cm} \{12, 11, 16, 8\},\newline \hspace*{3.1cm} \{12, 14, 15, 16\}\};}& \texttt{\textbf{false}} \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+\end{document}

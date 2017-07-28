@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{pxfonts}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  commentstyle = \fontsize{9}{11}\selectfont\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200: Programming I}\\
+	\textbf{Spring 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{PLTL: Week of 03/05/17}\\
+	\textbf{Arrays/Methods}
+\end{center}
+
+
+\noindent\underline{\textbf{Problem \#1}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem1} and that has the \texttt{main} method. Prompt the user to enter a integer between 1 and 4 with both, row and column.
+	\item The program should create a multiplication table by finding the product for each incrementation of the row and column respectively. The table should end at \texttt{row * column}.
+	\item Several sample usages are provided for you below. 
+\end{itemize}
+\begin{center}
+\begin{minipage}{3cm}
+\begin{lstlisting}[escapechar=@]
+Enter row: @\textbf{3}@
+Enter col: @\textbf{4}@
+1 2 3 4 
+2 4 6 8 
+3 6 9 12 
+\end{lstlisting}
+\end{minipage}
+\hspace*{.5cm}
+\begin{minipage}{3cm}
+\begin{lstlisting}[escapechar=@]
+Enter row: @\textbf{3}@
+Enter col: @\textbf{3}@
+1 2 3 
+2 4 6 
+3 6 9
+\end{lstlisting}
+\end{minipage}
+\hspace*{.5cm}
+\begin{minipage}{3cm}
+\begin{lstlisting}[escapechar=@]
+Enter row: @\textbf{4}@
+Enter col: @\textbf{4}@
+1 2 3 4 
+2 4 6 8 
+3 6 9 12 
+4 8 12 16 
+\end{lstlisting}
+
+\end{minipage}\\
+
+
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\underline{\textbf{Problem \#2}}
+\begin{itemize}
+	\item Write a program that has the class name \texttt{Problem2} and that has the \texttt{main} method. 
+	\item Write a program that creates a 10 by 10 box. The box should look exactly as the sample usage below. 
+	\item Even though the values are given nothing should be hard coded all constants must be assigned a variable.
+	\item Several sample usages are provided for you below. 
+\end{itemize}
+\begin{center}
+\hspace*{.5cm}
+\begin{minipage}{10cm}
+\begin{lstlisting}[escapechar=@]
+1@\hspace*{.34cm}@2@\hspace*{.33cm}@3@\hspace*{.33cm}@4@\hspace*{.34cm}@5@\hspace*{.34cm}@6@\hspace*{.34cm}@7@\hspace*{.34cm}@8@\hspace*{.3cm}@9@\hspace*{.34cm}@10
+2   @\hspace*{4cm}@   20 
+3   @\hspace*{4cm}@   30 
+4   @\hspace*{4cm}@   40 
+5   @\hspace*{4cm}@   50 
+6   @\hspace*{4cm}@   60 
+7   @\hspace*{4cm}@   70 
+8   @\hspace*{4cm}@   80 
+9   @\hspace*{4cm}@   90 
+10 20 30 40 50 60 70 80 90 100 
+\end{lstlisting}
+\end{minipage}\\
+\end{center}
+
+\end{document}
