@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{upquote}
+\usepackage{pxfonts}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+
+\lstset{%
+  language=Java,
+  basicstyle=\fontsize{9}{11}\selectfont\ttfamily,
+  keywordstyle=\bfseries,
+  breaklines=true,
+  columns=fullflexible,
+  frame=single,
+  showstringspaces=false,
+  tabsize=4,
+  morekeywords = {main},
+}
+
+\begin{document}
+\begin{center}
+	\textbf{CS-200-1: Programming I}\\
+	\textbf{Fall 2017}\\
+	\textbf{Northeastern Illinois University}\\
+	\textbf{Programming Project: BattleShip}\\
+	\textbf{Due: Tursday, 12/07 at 5:00 p.m.}
+\end{center}
+
+\vspace*{0.5cm}
+\noindent\textbf{Background:}\\
+Battleship is a game played between two players, in this case yourself and the computer. Each player is given a grid with a with a few ships of varying sizes placed randomly on the grid. For our program this grid will be a 10 x 10 grid and our ships will vary in size as follows: (2) size 2 ships, (3) size 3 ships, and (3) size 4 ships. 
+
+
+
+\begin{itemize}
+	\item 	A player begins by choosing a position on the grid that they believe has an enemy ship on it. Following each move the computer will return fire.  
+	\item The game ends when either the user or the computer hits all 8 ships for a total of 25 hits. 
+	\item Here is a link to the actual BattleShip game along with a description: https://www.hasbro.com/en-us/product/battleship:2560F81B-5056-9047-F55A-F26A61C519C3
+	
+\end{itemize}
+
+\vspace*{0.5cm}
+\noindent\textbf{Initial Instructions:}
+\begin{itemize}
+	\item You should work in groups of 2-3 individuals. Groups of more than 3 are \textbf{not} permitted.
+	\item Each group should submit ONE project write-up. It is the responsibility of each group member to ensure that their name is on the write-up.
+	\item The lab write-up should be typed! Type each question (and the question number) followed by your group's answer. \textbf{Convert your lab write-up to a .pdf.}
+	\item You should use complete sentences and proper grammar in your write-up. Use spell-check! This counts as part of your grade.
+	\item Your code should be your own - no plagiarism is permitted! You should have at least 3 methods in your code, not including the \texttt{main} method.
+	\item Submit the pdf and your .java files to D2L by the specified due date.
+	\item Each member of the group must turn in a \texttt{readable} digital copy of the peer assessment to an individual Dropbox by the assigned due date and time. The peer assessment counts as a significant part of your grade and you will receive a \textbf{zero} for that portion of the research lab grade if you do not turn it in. 
+	\item A selfie of the group must be included with the project submission. The selfie may not taken inside of the classroom. It must be outside of the classroom with all members present. If a member cannot pyshically make the meeting they can be pictured with the group using  Skype or Google Hangouts.
+\end{itemize}
+
+\vspace*{0.5cm}
+\noindent\textbf{Guidelines}\\
+You should adhere to the following guidelines when designing your program.
+\begin{enumerate}
+	\item User \textbf{always} goes first. The computer should immediately return fire.
+	\item The user and the computer should both have a grid that is printed. The computer\' s ships will be hidden from the user while the users ships will appear on their grid in the form of a char \texttt{S}. Each grid should be labeled computer and player board respectively. The grids should look as follows:
+\begin{center}
+\begin{minipage}{8cm}
+\begin{lstlisting}[frame=none, escapechar=@]
+Player / Computer Board
+
+@\hspace*{-5pt}@1@\hspace*{0pt}@| # |  # | # | # | # | # | # | # | # | # |
+@\hspace*{-5pt}@2@\hspace*{0pt}@| # |  # | # | # | # | # | # | # | # | # |
+@\hspace*{-5pt}@3@\hspace*{0pt}@| # |  # | # | # | # | # | # | # | # | # |
+@\hspace*{-5pt}@4@\hspace*{0pt}@| # |  # | # | # | # | # | # | # | # | # |
+@\hspace*{-5pt}@5@\hspace*{0pt}@| # |  # | # | # | # | # | # | # | # | # |
+@\hspace*{-5pt}@6@\hspace*{0pt}@| # |  # | # | # | # | # | # | # | # | # |
+@\hspace*{-5pt}@7@\hspace*{0pt}@| # |  # | # | # | # | # | # | # | # | # |
+@\hspace*{-5pt}@8@\hspace*{0pt}@| # |  # | # | # | # | # | # | # | # | # |
+@\hspace*{-5pt}@9@\hspace*{0pt}@| # |  # | # | # | # | # | # | # | # | # |
+@\hspace*{-10pt}@10@\hspace*{0pt}@| # |  # | # | # | # | # | # | # | # | # |
+-----------------------------------------
+@\hspace*{8pt}@1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+
+\end{lstlisting}
+\end{minipage}
+\end{center}
+	\item  The user should be prompted to enter an x coordinate and then a y coordinate that corresponds with the grid. The only valid inputs are the numbers 1-10 respective to each axis.
+	\item You should prompt the user for input with the following prompt:\\
+	\texttt{"Enter X coordinate: "}\\
+	\texttt{"Enter Y coordinate: "}
+	\item If the user chooses a coordinate that has been chosen they should be prompted with the following response:\\
+	\texttt{"Those coordinates have already been choosen. Please pick again."}\\
+	The user should be reprompted for new coordinates and the computer should not take its this happens.
+	\item If incorrect coordinates (anything not 1-10 inclusive) were entered the user should be prompted immediately after entering the coordinate with:\\
+     \texttt{"Enter Correct pair of coordinates!"}\\
+     and the immediately reprompted to enter new coordinates.
+	\item Each grid should be reprinted after a correct pair of coordinates were entered. The grid should display \texttt{O} for misses and \texttt{X} for hits. 
+	\item Both the computer and the player\' s board should be randomized every time a new game is started. Ships should be placed at random coordinates and should placed in a random direction from those coordinates. For example, coordinates x and y should not be hard coded to always go x and y + 1  or x + 1 and y, but rather in any direction be it y or x negative or positive.
+	\item It is important to note that rows will represent the y-axis and columns will represent the x-axis.
+	\item You should print one of the following messages when the user or the computer wins.\\ 
+	\texttt{"Congratulations you have won!"} \\
+	\texttt{"You lose! Try again!"} \\ 
+	\item Your output should be easy to read and the board easy to understand (i.e. hashtags should be replaced with X's and O's as the user enters information). You will be graded on usability of the program.
+	\item You should thoroughly test all aspects of the program (invalid input, occupied spaces, etc). You will be graded on the correctness of your program.
+\end{enumerate}
+
+\vspace*{0.5cm}
+\noindent\textbf{Project write-up questions}\\
+Answer the following questions in your lab write-up. Make sure to include each question in the write-up followed by your group's answer.
+
+\vspace*{0.5cm}
+\noindent\textbf{Q1:} Create a flow chart - a graphical representation of the sequence of steps needed to implement the tic-tac-toe algorithm. For additional information and details on flow charts, see the following sites: \\
+\url{http://www.computerhope.com/jargon/f/flowchar.htm}\\
+\url{http://users.evtek.fi/~jaanah/IntroC/DBeech/3gl_flow.htm} 
+
+\vspace*{0.5cm}
+\noindent\textbf{Q2:} Describe how you stored the user entries for the square choices.
+
+\vspace*{0.5cm}
+\noindent\textbf{Q3:} What are the methods that your group created in your code? Describe each method in detail and why you chose to create each particular method.
+
+\vspace*{0.5cm}
+\noindent\textbf{Q4:} What was the most challenging part of this project for your group?
+
+\vspace*{0.5cm}
+\noindent\textbf{Q5:} What did your group learn/find the most useful by doing this project?
+
+\vspace*{0.5cm}
+\noindent\textbf{Q6:} What was the most fun aspect of doing this project?
+	
+\end{document}
